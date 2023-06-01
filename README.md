@@ -19,3 +19,12 @@ php artisan make:livewire Chat.SendMessage
 php artisan make:livewire Chat.CreateChat
 
 ```
+
+link resource:  
+https://raw.githubusercontent.com/eduardoboucas/include-media/master/dist/_include-media.scss  
+
+https://releases.jquery.com/  
+choose minified 
+
+https://getbootstrap.com/   
+css only   
