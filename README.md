@@ -28,3 +28,6 @@ choose minified
 
 https://getbootstrap.com/   
 css only   
+
+https://picsum.photos/  
+random photo  
