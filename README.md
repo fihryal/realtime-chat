@@ -31,3 +31,6 @@ css only
 
 https://picsum.photos/  
 random photo  
+
+https://icons.getbootstrap.com/ 
+scroll ke paling bawah & ambil cdn icon boostrap  
