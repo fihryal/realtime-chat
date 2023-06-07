@@ -23,8 +23,10 @@ class Chatlist extends Component
         // dd($conversation, $receiverId);
         $this -> selectedConversation = $conversation;
         $receiverInstance = User::find($receiverId);
+        // dd($this -> selectedConversation , $receiverInstance );
 
-        dd($this -> selectedConversation , $receiverInstance );
+        $this->emitTo('chat.chatbox', 'loadConversation', $this->selectedConversation, $receiverInstance);
+
     }
 
     public function getChatUserInstance(Conversation $conversation, $request){
