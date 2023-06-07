@@ -17,7 +17,7 @@
     @foreach ($conversations as $conversation)
         <div class="chatlist_body">
     
-            <div class="chatlist_item">
+            <div class="chatlist_item" wire:click="$emit('chatUserSelected', {{ $conversation }}, {{ $this->getChatUserInstance($conversation, $name = 'id') }})">
                 <div class="chatlist_img_container">
                     <img src="https://picsum.photos/id/{{ $this->getChatUserInstance($conversation, $name = 'id') }}/200/300" alt="">
                 </div>
@@ -27,7 +27,7 @@
                         <div class="list_username">{{ $this->getChatUserInstance($conversation, $name = 'name') }}</div>
                         <span class="date">{{ $conversation->messages->last()->created_at->shortAbsoluteDiffForHumans() }}</span>
                     </div>
-                    <div class="bottom_row">
+                    <div class="bottom_row"> 
                         <div class="message_body text-truncate">
                             {{ $conversation->messages->last()->body }}
                         </div>
