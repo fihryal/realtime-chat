@@ -33,4 +33,7 @@ https://picsum.photos/
 random photo  
 
 https://icons.getbootstrap.com/ 
-scroll ke paling bawah & ambil cdn icon boostrap  
+scroll ke paling bawah & ambil cdn icon boostrap 
+
+https://ui-avatars.com/  
+update photo avatar  
