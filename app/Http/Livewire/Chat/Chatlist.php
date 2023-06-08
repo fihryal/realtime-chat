@@ -26,11 +26,12 @@ class Chatlist extends Component
         // dd($this -> selectedConversation , $receiverInstance );
 
         $this->emitTo('chat.chatbox', 'loadConversation', $this->selectedConversation, $receiverInstance);
+        $this->emitTo('chat.send-message', 'updateSendMessage', $this->selectedConversation, $receiverInstance);
 
     }
 
     public function getChatUserInstance(Conversation $conversation, $request){
-        $this->auth_id = auth()->id();
+        $this->auth_id = auth()->id(); 
 
         if ($conversation->sender_id == $this->auth_id) {
             $this->receiverInstance = User::firstWhere('id', $conversation->receiver_id);
