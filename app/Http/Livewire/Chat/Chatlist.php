@@ -17,7 +17,7 @@ class Chatlist extends Component
 
     public $selectedConversation;
 
-    protected $listeners = ['chatUserSelected'];
+    protected $listeners = ['chatUserSelected','refresh'=>'$refresh'];
 
     public function chatUserSelected(Conversation $conversation, $receiverId){
         // dd($conversation, $receiverId);
@@ -28,7 +28,7 @@ class Chatlist extends Component
         $this->emitTo('chat.chatbox', 'loadConversation', $this->selectedConversation, $receiverInstance);
         $this->emitTo('chat.send-message', 'updateSendMessage', $this->selectedConversation, $receiverInstance);
 
-    }
+    } 
 
     public function getChatUserInstance(Conversation $conversation, $request){
         $this->auth_id = auth()->id(); 
